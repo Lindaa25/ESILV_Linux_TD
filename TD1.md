@@ -21,7 +21,7 @@ $ mkdir test
 ```
 ### 5. Go to the general home directory (should contain folders named after each user)
 ```
-$ 
+$ cd ..
 ```
 quand il y a d'autres utilisateurs il y a un 'general home' entre root et home (mais pas le cas pour nous)
 ### 6. Go to your home directory
