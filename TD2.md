@@ -123,6 +123,29 @@ ls -l hello_multiple_i.deflate | awk '{print $5}' >> log_compress
 cat log_compress
 ```
 ## Exercice 6 :  ACLs : Access Control Lists
+```
+sudo adduser client_1
+sudo adduser contributor_1
+sudo adduser contributor_2
+sudo addgroup clients
+sudo addgroup contributors
+sudo usermod -aG clients client_1
+sudo usermod -aG contributors contributor_1
+sudo usermod -aG contributors contributor_2
+groups client_1
+groups contributor_1
+groups contributor_2
+mkdir lika_project
+chmod g+r lika_project
+chmod g+rw lika_project
+ls -l
+su client_linda
+rm -r lika_project
+su contributor_linda
+rm -r lika_project
+whoami
+```
+
 
 
 
