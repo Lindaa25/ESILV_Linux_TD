@@ -10,7 +10,6 @@ cat /etc/os-release
 ps -ef
 top
 
-
 ```
 ## Exercise 2 : Shell - Variables and scripts scope 
 
@@ -77,5 +76,6 @@ bash
 pilou
 ```
 ## Exercice 3 : Scheduling task - daemon
+
 
 
