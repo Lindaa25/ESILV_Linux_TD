@@ -20,5 +20,6 @@ git status
 echo "# Test repository" > readme.md
 cat readme.md
 git status #il y a des untracked files : il faut ajouter les fichiers dans git
-
+git add readme.md
+git status #nouveau fichier dans la stage zone
 ```
