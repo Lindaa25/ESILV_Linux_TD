@@ -113,9 +113,103 @@ $ nano script_1.sh
 
 ### 4. Display the content of the script (using a command, not from editor)
 ```
-$ chmod 777 script_1.sh
+cat script_1.sh
 $ ./script_1.sh
 ```
+
+### 5. Run the script
+```
+$ source script_1.sh
+#ou
+$ ./script_1.sh
+```
+## Exercise 4 :  Accessing or modifying a file : permissions and
+root privilege
+## 4.1  Change the rights for accessing or modifying a file
+### 1. Create a file credentials in the folder linux_ex_1
+```
+cd linux_ex_1
+touch credentials
+```
+### (a) Write any kind of (fake) personal information within the file
+```
+blabla...
+```
+### (b) Display the file content
+```
+cat credentials
+```
+### (c) Display the current permissions
+```
+ls -l credentials
+```
+
+### 2. Change the current permissions to : read only for all users
+```
+chmod u=r credentials
+```
+### (a) Display the new permissions
+```
+ls -l credentials
+```
+### (b) Modify and save the file
+```
+nano credentials
+#Crtl+X+Y+ENT
+```
+### (c) Display the file content
+```
+cat credentials
+```
+### 3. Change the permissions back to read and write for all users
+```
+chmod ugo+rw credentials
+```
+### (a) Display the new permissions
+```
+ls -l credentials
+```
+### (b) Modify and save the file
+```
+nano credentials
+#Crtl+X+Y+ENT
+```
+### (c) Display the file content
+```
+cat credentials
+```
+## On the same file :
+### 1. Add the execute permission to the owner
+```
+chmod u+x credentials
+```
+### (a) Display the new permissions
+```
+ls -l credentials
+```
+### 2. Remove the read permission to other users
+```
+chmod o-r credentials
+```
+### (a) Display the new permissions
+```
+ls -l creddentials
+```
+### 3. Change the permissions to read, write and execute for all users
+```
+chmod u+rwx credentials
+```
+### (a) Display the new permissions
+```
+ls -l creddentials
+```
+## Exercise 4.2 Access root files
+
+
+
+
+
+
 
 
 
