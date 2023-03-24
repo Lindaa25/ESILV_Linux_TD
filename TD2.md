@@ -41,7 +41,7 @@ echo "pilou pilou"
 ```
 ### 6. Run this script 
 ```
-./pilou
+source pilou
 ```
 ### 7. Make this script executable
 ```
@@ -57,7 +57,7 @@ echo $PATH
 ```
 ### 10. Add the path of your current location to the global variable PATH 
 ```
-export PATH=$PATH:/path/to/current/location
+PATH=$PATH:/path/to/current/location
 ```
 ### 11. When you are sure of the result, export it 
 ```
@@ -69,7 +69,7 @@ cd ~
 ```
 ### 13. Run your script by writting its name only 
 ```
-pilou
+./pilou
 ```
 ### 14. Change the value of the PATH in the .profile file in order to make it permanent 
 ```
@@ -82,5 +82,41 @@ pilou
 ```
 ## Exercice 3 : Scheduling task - daemon
 
+### 1. Create a script say_hello.sh
+```
+echo "$(date) Hello " >> hellos.txt
+chmod +x say_hello.sh
+crontab -e
+```
+## Exercise 4: Hashing
+```
+mkdir hash_checksum
+cd hash_checksum
+touch .sensible_addresses .sensible_passwords
+ls -a
+echo "Have a good day" >> gentle_script.sh
+./gentle_script.sh
+sha256sum gentle_script.sh > log_sha
+echo 'rm -f .sensible*' >> gentle_script.sh
+sha256sum gentle_script.sh > log_sha
+./gentle_script.sh
+ls -a
+cat log_sha
+```
 
+## Exercise 5: Compressing
+```
+sudo apt-get install qpdf
+mkdir compress
+cd compress
+echo "Hello" > hello
+zlib-flate -1 < hello > hello.deflate
+ls -l hello.deflate | awk '{print $5}' > log_compress
+yes "Hello" | head -n 1000 > hello_multiple
+zlib-flate -1 < hello_multiple > hello_multiple.deflate
+ls -l hello_multiple.deflate | awk '{print $5}' >> log_compress
+zlib-flate -1 < hello_multiple > hello_multiple.deflate
+ls -l hello_multiple.deflate | awk '{print $5}' >> log_compress
+
+```
 
