@@ -204,6 +204,109 @@ chmod u+rwx credentials
 ls -l creddentials
 ```
 ## Exercise 4.2 Access root files
+### 1. Go to the root folder
+```
+cd /
+```
+### 2. Create a file in root user mode named .private_file
+```
+sudo touch /.private_file
+```
+### (a) Write some information in the file
+```
+sudo vi /.private_file
+```
+--> on presse i, on écrit et":wq" 
+### (b) Display the file content
+```
+sudo cat /.private_file
+```
+### (c) Display all the files in the folder including hidden files
+```
+sudo ls -a /
+```
+### 3. Modify the file in normal user mode
+```
+sudo chown linda /.private_file
+sudo chmod u+rwx /.private_file
+```
+### (a) Write some new information in the file
+```
+#idem 
+```
+### (b) Display the file content
+```
+sudo cat /.private_file
+```
+### 4. Modify the file in root user mode
+```
+sudo vi /.private_file
+```
+### (a) Write some new information in the file
+```
+#idem
+```
+### (b) Display the file content
+```
+sudo cat /.private_file
+```
+### 5. Change permissions to read, write and execute for all users
+```
+sudo chmod a+rwx /.private_file
+```
+### (a) Modify the file content in normal user mode
+```
+#idem
+```
+### (b) Display the file content
+```
+sudo cat /.private_file
+```
+## Exercise 4.3 Change a file owner
+
+### 1. Change permissions of .private_file to read and write for all users, in normal user mode
+```
+sudo chown linda .private_file
+sudo chmod a+rw .private_file
+```
+### 2. Set the new file owner as the current user
+```
+sudo chown $USER .private_file
+```
+### 3. Change permissions of .private_file to read and write for all users, in normal user mode
+```
+chmod a+rw .private_file
+```
+## Exercise 4:.4 Manage Packages (tools / functions)
+### 1. Update your main package manager named apt
+```
+apt update
+```
+### 2. Upgrade apt
+```
+apt upgrade
+```
+### 3. Install the package cmatrix
+```
+apt install cmatrix
+```
+### 4. Launch cmatrix
+```
+cmatrix
+```
+### 5. Quit cmatrix
+Press "Ctrl+c"
+### 6. Install the package tmux
+```
+apt install tmux
+```
+### 7. Launch tmux
+```
+tmux
+```
+
+
+
 
 
 
