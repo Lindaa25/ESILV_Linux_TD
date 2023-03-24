@@ -9,6 +9,11 @@ sudo apt-get update
 cat /etc/os-release
 ps -ef
 top
+scpu|grep cache
+df -h
+du -h
+cat /proc/mounts
+dmesg | grep usbhostname
 
 ```
 ## Exercise 2 : Shell - Variables and scripts scope 
