@@ -117,6 +117,12 @@ zlib-flate -1 < hello_multiple > hello_multiple.deflate
 ls -l hello_multiple.deflate | awk '{print $5}' >> log_compress
 zlib-flate -1 < hello_multiple > hello_multiple.deflate
 ls -l hello_multiple.deflate | awk '{print $5}' >> log_compress
-
+for i in {1..100}; do echo "Hello $i"; done > hello_multiple_i
+zlib-flate -1 < hello_multiple_i > hello_multiple_i.deflate
+ls -l hello_multiple_i.deflate | awk '{print $5}' >> log_compress
+cat log_compress
 ```
+## Exercice 6 :  ACLs : Access Control Lists
+
+
 
