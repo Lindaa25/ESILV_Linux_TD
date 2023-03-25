@@ -13,7 +13,7 @@ ls -ld bin | awk '{printf("%s-%s-%02d\n", $8, substr($6, 1, 3), $7)}'
 ```
 curl https ://en.wikipedia.org/wiki/List_of_cyberattacks > cyberattacks.txt 
 cat cyberattacks.txt | grep meta
-cat cyberattacks.txt | grep -oP "meta\s\w+"
+cat cyberattacks.txt | grep -oP "meta\s\w+"  #-o : output ; -P : Perl regex syntax)
 cat cyberattacks.txt | grep -oP "(?<=meta\s)\w+" #ce qui est après meta
 cat cyberattacks.txt | grep -P 'A cyberattack is' #ne marche pas comme ça (voir ligne suivante)
 cat cyberattacks.txt | grep -P 'A <a href="/wiki/Cyberattack" title="Cyberattack">cyberattack</a> is any type'
