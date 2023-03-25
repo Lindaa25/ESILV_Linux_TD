@@ -22,4 +22,4 @@ cat cyberattacks.txt | grep -P "(?<=<title>)"
 cat cyberattacks.txt | grep -P "(?<=<title>).*(?=</title>)" #pour avoir ce qu'il a entre les balises title
 cat cyberattacks.txt | grep -oP "(?<=<title>).*(?=</title>)" #avoir -o récupère uniquement le titre
 ```
-<span class="c-instrument c-instrument--last" data-ist-last="">21.74</span>
+
