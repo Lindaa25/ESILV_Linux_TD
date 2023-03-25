@@ -15,7 +15,7 @@ curl https ://en.wikipedia.org/wiki/List_of_cyberattacks > cyberattacks.txt
 cat cyberattacks.txt | grep meta
 cat cyberattacks.txt | grep -oP "meta\s\w+"  #-o : output ; -P : Perl regex syntax)
 cat cyberattacks.txt | grep -oP "(?<=meta\s)\w+" #ce qui est après meta
-cat cyberattacks.txt | grep -P 'A cyberattack is' #ne marche pas comme ça (voir ligne suivante)
+cat cyberattacks.txt | grep -P 'A cyberattack is' #ne va pas marcher (voir ligne suivante)
 cat cyberattacks.txt | grep -P 'A <a href="/wiki/Cyberattack" title="Cyberattack">cyberattack</a> is any type'
 cat cyberattacks.txt | grep -A1 'mw-content-text' | grep -v 'mw-content-text' 
 cat cyberattacks.txt | grep -P "(?<=<title>)"
