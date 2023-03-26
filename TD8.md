@@ -12,7 +12,4 @@ touch .gitignore
 *.log
 git add .
 git commit -m "Initial commit"
-
-
-
 ```
